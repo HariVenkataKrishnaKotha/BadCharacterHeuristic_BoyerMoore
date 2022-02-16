@@ -1,5 +1,3 @@
-/* C++ Program for Bad Character Heuristic of Boyer
-Moore String Matching Algorithm */
 #include <iostream>
 #include<sstream>
 #include<fstream>
@@ -45,7 +43,7 @@ void search(string text, string pattern)
     }
 }
 
-string readFileIntoString2(const string& path) {
+string FileToString(const string& path) {
     auto ss = ostringstream{};
     ifstream input_file(path);
     if (!input_file.is_open()) {
@@ -63,7 +61,7 @@ int main()
     string filename("Sample.txt");
     //string file_contents;
 
-    string text = readFileIntoString2(filename);
+    string text = FileToString(filename);
     string pattern;// = "agt tactcgtgcgtattacct";
     START:std::getline(std::cin, pattern);
     auto start = std::chrono::steady_clock::now();
